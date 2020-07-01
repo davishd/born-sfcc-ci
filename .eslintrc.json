@@ -12,6 +12,8 @@
         "strict": 0,
         "import/no-unresolved": "off",
         "no-restricted-syntax": "off",
-        "no-await-in-loop": "off"
+        "no-await-in-loop": "off",
+        "comma-dangle": "off",
+        "no-console": "off"
     }
 }
