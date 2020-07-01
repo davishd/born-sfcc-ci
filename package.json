@@ -1,0 +1,23 @@
+{
+  "name": "born-sfcc-ci",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "bin": "main.js",
+  "author": "Davis DeVries <davis.devries@borngoup.com",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^4.0.1",
+    "chalk": "^4.0.0",
+    "del": "^5.1.0",
+    "minimist": "^1.2.5",
+    "node-fetch": "^2.6.0",
+    "ora": "^4.0.3",
+    "sfcc-ci": "^2.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}

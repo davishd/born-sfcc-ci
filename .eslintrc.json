@@ -1,0 +1,17 @@
+{
+    "root": true,
+    "extends": "eslint-config-airbnb-base",
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "script"
+    },
+    "rules": {
+        "global-require": "off",
+        "import/no-dynamic-require": "off",
+        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
+        "strict": 0,
+        "import/no-unresolved": "off",
+        "no-restricted-syntax": "off",
+        "no-await-in-loop": "off"
+    }
+}
