@@ -7,6 +7,7 @@ const activate = require('../lib/code-activate');
 
 module.exports = async () => {
     const spinner = ora();
+
     try {
         const dw = utils.getDw();
 

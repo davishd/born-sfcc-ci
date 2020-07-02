@@ -1,14 +1,17 @@
 {
-  "name": "born-sfcc-ci",
-  "version": "0.0.1",
-  "description": "",
+  "name": "@borngroup/born-sfcc-ci",
+  "version": "1.0.0",
+  "description": "CI/CD tooling for the SFCC practice @ BORN Group",
   "main": "main.js",
   "bin": "main.js",
-  "author": "Davis DeVries <davis.devries@borngoup.com",
+  "author": "Davis DeVries <davis.devries@borngoup.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davishd/born-sfcc-ci"
+  },
   "dependencies": {
     "archiver": "^4.0.1",
-    "chalk": "^4.0.0",
     "del": "^5.1.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.0",

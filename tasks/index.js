@@ -2,5 +2,5 @@
 
 module.exports = {
     'activate-code': require('./activate-code'),
-    'deploy-data': require('./deploy-data'),
+    'deploy-data': require('./deploy-data')
 };
