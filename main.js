@@ -4,7 +4,7 @@
 
 const minimist = require('minimist');
 
-const tasks = require('./tasks/index.js');
+const tasks = require('./tasks/index');
 
 const { task } = minimist(process.argv.slice(2));
 

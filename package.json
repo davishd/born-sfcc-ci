@@ -12,11 +12,14 @@
   },
   "dependencies": {
     "archiver": "^4.0.1",
+    "conf": "^7.0.1",
     "del": "^5.1.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.0",
+    "open": "^7.0.4",
     "ora": "^4.0.3",
-    "sfcc-ci": "^2.4.1"
+    "sfcc-ci": "^2.4.1",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
