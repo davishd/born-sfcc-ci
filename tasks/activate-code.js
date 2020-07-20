@@ -2,9 +2,9 @@
 
 const ora = require('ora');
 
-const utils = require('../lib/utils');
-const authenticate = require('../lib/authenticate');
 const activate = require('../lib/code-activate');
+const authenticate = require('../lib/authenticate');
+const utils = require('../lib/utils');
 
 module.exports = async () => {
     const spinner = ora();

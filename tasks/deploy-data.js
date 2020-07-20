@@ -2,11 +2,12 @@
 
 const ora = require('ora');
 
-const utils = require('../lib/utils');
 const authenticate = require('../lib/authenticate');
 const compress = require('../lib/data-compress');
-const dataUpload = require('../lib/data-upload');
+const dataDelete = require('../lib/data-delete');
 const dataImport = require('../lib/data-import');
+const dataUpload = require('../lib/data-upload');
+const utils = require('../lib/utils');
 
 module.exports = async () => {
     const spinner = ora();
@@ -25,16 +26,16 @@ module.exports = async () => {
         token = result.token;
         spinner.succeed(`Authenticated as ${user.name} <${user.email}>`);
 
-        spinner.start('Compressing Data');
+        spinner.start('Compressing data');
         const bundles = utils.getBundles();
         const targetBundle = dw['data-bundle'];
         const folders = bundles[targetBundle];
         compressedFolders = await compress(folders);
-        spinner.succeed('Data Compressed');
+        spinner.succeed('Data compressed');
 
-        spinner.start('Uploading Data');
+        spinner.start('Uploading data');
         await dataUpload(hostnames, compressedFolders, token);
-        spinner.succeed('Data Uploaded');
+        spinner.succeed('Data uploaded');
     } catch (error) {
         spinner.fail();
         utils.logError(error);
@@ -43,10 +44,14 @@ module.exports = async () => {
     }
 
     try {
-        spinner.start('Importing Data');
+        spinner.start('Importing data');
         const results = await dataImport(hostnames, compressedFolders, token);
-        spinner.succeed('Data Imported\n');
+        spinner.succeed('Data imported\n');
         utils.logImportResults(results);
+
+        spinner.start('Deleting uploaded data');
+        await dataDelete(hostnames, compressedFolders, token);
+        spinner.succeed('Deleted uploaded data\n');
     } catch (error) {
         spinner.fail();
         utils.logImportError(error);
