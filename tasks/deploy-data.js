@@ -24,10 +24,9 @@ module.exports = async () => {
         token = result.token;
         logger.success(`Authenticated as ${user.name} <${user.email}>`);
 
+        const folders = await utils.getDataFolders();
+
         logger.start('Compressing data');
-        const bundles = utils.getBundles();
-        const targetBundle = dw['data-bundle'];
-        const folders = bundles[targetBundle];
         compressedFolders = await compress(folders);
         logger.success('Data compressed');
 
