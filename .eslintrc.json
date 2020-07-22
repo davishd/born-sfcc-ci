@@ -1,19 +1,15 @@
 {
     "root": true,
-    "extends": "eslint-config-airbnb-base",
+    "extends": ["eslint:recommended", "google"],
     "parserOptions": {
-        "ecmaVersion": 8,
-        "sourceType": "script"
+        "sourceType": "script",
+        "ecmaVersion": 8
+    },
+    "env": {
+        "node": true,
+        "es6": true
     },
     "rules": {
-        "global-require": "off",
-        "import/no-dynamic-require": "off",
-        "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "strict": 0,
-        "import/no-unresolved": "off",
-        "no-restricted-syntax": "off",
-        "no-await-in-loop": "off",
-        "comma-dangle": "off",
-        "no-console": "off"
+        "strict": ["error", "global"]
     }
 }
