@@ -1,26 +1,22 @@
 'use strict';
 
-const ora = require('ora');
-
 const activate = require('../lib/code-activate');
 const authenticate = require('../lib/authenticate');
+const logger = require('../lib/logger');
 const utils = require('../lib/utils');
 
 module.exports = async () => {
-    const spinner = ora();
-
     try {
         const dw = utils.getDw();
-
-        spinner.start('Authenticating');
+        logger.start('Authenticating');
         const { user, token } = await authenticate(dw['client-id']);
-        spinner.succeed(`Authenticated as ${user.name} <${user.email}>`);
+        logger.success(`Authenticated as ${user.name} <${user.email}>`);
 
-        spinner.start(`Activating code version ${dw['code-version']}`);
+        logger.start(`Activating code version ${dw['code-version']}`);
         const version = await activate(dw.hostname, dw['code-version'], token);
-        spinner.succeed(`Activated code version ${version} on ${dw.hostname}`);
+        logger.success(`Activated code version ${version} on ${dw.hostname}`);
     } catch (error) {
-        spinner.fail();
+        logger.error();
         utils.logError(error);
     }
 };
