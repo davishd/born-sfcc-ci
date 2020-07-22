@@ -1,7 +1,7 @@
 {
   "name": "@borngroup/born-sfcc-ci",
   "version": "1.0.0",
-  "description": "CI/CD tooling for the SFCC practice @ BORN Group",
+  "description": "BORN Group's CI/CD tooling for the SFCC B2C practice",
   "main": "main.js",
   "bin": "main.js",
   "author": "Davis DeVries <davis.devries@borngoup.com>",
