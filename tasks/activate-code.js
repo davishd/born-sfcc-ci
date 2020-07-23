@@ -15,9 +15,10 @@ async function activateCode() {
     const {user, token} = await authenticate(dw['client-id']);
     logger.success(`Authenticated as ${user.name} <${user.email}>`);
 
-    logger.start(`Activating code version ${dw['code-version']}`);
-    const version = await activate(dw.hostname, dw['code-version'], token);
-    logger.success(`Activated code version ${version} on ${dw.hostname}`);
+    const codeVersion = dw['version'] || dw['code-version'];
+    logger.start(`Activating code version ${codeVersion}`);
+    await activate(dw.hostname, codeVersion, token);
+    logger.success(`Activated code version ${codeVersion} on ${dw.hostname}`);
   } catch (error) {
     logger.error();
     utils.logError(error);
