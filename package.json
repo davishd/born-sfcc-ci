@@ -1,6 +1,6 @@
 {
   "name": "@borngroup/born-sfcc-ci",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "BORN Group's CI/CD tooling for the SFCC B2C practice",
   "main": "main.js",
   "bin": "main.js",
