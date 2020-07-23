@@ -206,7 +206,7 @@ BORN SFCC CI requires a valid *dw.json* in the root directory. The *dw.json* pro
     "hostname": "my-instance.sandbox.us01.dx.commercecloud.salesforce.com",
     "version": "myversion",
     "data-bundle": "sandbox",
-	"data-hostnames": ["my-instance01.com", "my-instance02.com", ...] // added for usage by the technical lead; can be omitted by developers.
+	  "data-hostnames": ["my-instance01.com", "my-instance02.com"] // added for usage by the technical lead; can be omitted by developers.
 }
 ```
 *dw.json* properties
@@ -228,7 +228,7 @@ See https://bitbucket.org/borngroup/sfcc-accelerators/src/master/site_template/r
 
 ## Usage
 
-BORN SFCC CI accepts a single `task` argument in order to specific the routine.
+BORN SFCC CI accepts a single `task` argument in order to specify the routine.
 
 ### Tasks
 
