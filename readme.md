@@ -190,6 +190,8 @@ BORN SFCC CI is an NPM package. It can be installed with the command:
 npm install @borngroup/born-sfcc-ci --save-dev
 ```
 
+**NOTE:** For Windows users, one additional step is required -- since `born-sfcc-ci` is installed locally, you'll need to add `path\to\project\node_modules\.bin` to the PATH environment variable in order to execute it without specifying the full path. Alternatively, you can install it globally with `npm install -g @borngroup/born-sfcc-ci`.
+
 ### Create a dw.json
 
 BORN SFCC CI requires a valid *dw.json* in the root directory. The *dw.json* provides the credentials and environmental setting needed to issue commands against your Commerce Cloud instances.
